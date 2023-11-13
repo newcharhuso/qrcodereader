@@ -18,13 +18,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/connectButton"
         android:layout_marginTop="16dp"
+        android:text="Data will be displayed here"
+
         android:layout_centerHorizontal="true"/>
 
-    <TextView
-        android:id="@+id/dataView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Data will be displayed here"
-        android:textSize="18sp"
-        android:layout_marginTop="16dp"/>
 </RelativeLayout>

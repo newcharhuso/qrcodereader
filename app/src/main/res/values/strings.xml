@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NFC1</string>
+    <string name="hex_data_placeholder">Placeholder for Hex Data: %1$s</string>
 </resources>

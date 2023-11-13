@@ -1,16 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- AndroidManifest.xml -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.nfc1">
 
     <uses-feature android:name="android.hardware.usb.host" />
     <uses-permission android:name="android.permission.USB_PERMISSION" />
-    <uses-feature android:name="android.hardware.usb.accessory" />
-
-    <!-- If your app needs to read from external storage (SD card, etc.) -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
-    <!-- If your app needs to read from internal storage -->
-    <!-- Note: Reading from internal storage usually doesn't require an explicit permission -->
-    <!-- <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" /> -->
 
     <application
         android:allowBackup="true"
@@ -27,6 +21,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver
+            android:name=".UsbReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.example.nfc1.USB_PERMISSION" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
